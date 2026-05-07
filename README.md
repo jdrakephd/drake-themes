@@ -22,7 +22,7 @@ the YAML header.
 In any Quarto project directory:
 
 ```bash
-quarto add jdrake/drake-themes
+quarto add jdrakephd/drake-themes
 ```
 
 This adds the extension under `_extensions/drake-themes/`. Commit that
