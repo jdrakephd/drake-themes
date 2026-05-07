@@ -1,0 +1,79 @@
+---
+title: "On the Logistic Curve"
+subtitle: "A note on saturation in epidemic models"
+author: "John Drake"
+institute: "Odum School of Ecology"
+date: today
+format:
+  drake-themes-navy-revealjs:
+    slide-number: c/t
+    transition: none
+    incremental: false
+---
+
+# Opening {.divider}
+
+## A simple question
+
+Why does the logistic equation appear so often in epidemiology, ecology,
+and the social sciences alike?
+
+The answer turns less on biology than on a structural property of
+constrained growth.
+
+::: {.fragment}
+We can sketch this in three slides.
+:::
+
+## Setup
+
+Consider a population $N(t)$ growing at rate $r$ in a system with
+carrying capacity $K$:
+
+$$ \frac{dN}{dt} = rN \left( 1 - \frac{N}{K} \right) $$
+
+The right-hand side carries two ideas: exponential growth ($rN$)
+and a brake ($1 - N/K$) that engages as the population approaches
+its limit.
+
+## Behavior over time {.figure-slide}
+
+![](figures/logistic-curve.png){fig-align="center"}
+
+<p class="caption">Solution to the logistic ODE for varying initial conditions. *r* = 0.3, *K* = 1000.</p>
+
+## A quote {.divider}
+
+> All models are wrong, but some are useful.
+>
+> — George Box
+
+## Code example
+
+```r
+library(deSolve)
+
+logistic <- function(t, N, parms) {
+  with(as.list(parms), list(r * N * (1 - N / K)))
+}
+
+out <- ode(y = c(N = 10), times = seq(0, 50, 0.1),
+           func = logistic, parms = c(r = 0.3, K = 1000))
+```
+
+## Background image with frosted caption
+
+::: {background-image="figures/field.jpg" background-size="cover"}
+
+::: {.frosted}
+A long-term study site in the southern Appalachians, where logistic
+dynamics emerge from competition for limited light.
+:::
+
+:::
+
+## Closing {.divider}
+
+*Thank you.*
+
+jdrake@uga.edu

@@ -1,0 +1,14 @@
+/* ============================================================
+   NAVY.CSS — Conference palette
+   Deep navy with antique gold accent. For external talks.
+   ============================================================ */
+
+:root {
+  --bg:      #0f1e3d;
+  --bg-alt:  #f4f1ea;       /* warm off-white for figure slides */
+  --fg:      #ecebe6;
+  --fg-alt:  #1a1a1a;
+  --muted:   #8a9bbd;
+  --accent:  #c9a96e;       /* antique gold */
+  --rule:    rgba(236, 235, 230, 0.18);
+}
