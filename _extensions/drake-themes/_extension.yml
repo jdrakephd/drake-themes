@@ -1,0 +1,18 @@
+title: Drake Themes
+author: John Drake
+version: 0.1.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    navy-revealjs:
+      format: revealjs
+      theme: [default, base.css, navy.css]
+    charcoal-revealjs:
+      format: revealjs
+      theme: [default, base.css, charcoal.css]
+    burgundy-revealjs:
+      format: revealjs
+      theme: [default, base.css, burgundy.css]
+    forest-revealjs:
+      format: revealjs
+      theme: [default, base.css, forest.css]

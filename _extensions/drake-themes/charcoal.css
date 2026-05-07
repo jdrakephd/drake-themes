@@ -1,0 +1,14 @@
+/* ============================================================
+   CHARCOAL.CSS — Seminar palette
+   Warm charcoal with slate-blue accent. For working seminars.
+   ============================================================ */
+
+:root {
+  --bg:      #1f2024;
+  --bg-alt:  #ededea;
+  --fg:      #e8e6e1;
+  --fg-alt:  #1a1a1a;
+  --muted:   #9a9a95;
+  --accent:  #7a96b8;       /* slate blue */
+  --rule:    rgba(232, 230, 225, 0.16);
+}

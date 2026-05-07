@@ -1,0 +1,15 @@
+/* ============================================================
+   FOREST.CSS — Ecology palette
+   Deep forest green with parchment accent. For teaching and
+   ecology-context talks (ECOL 8910, etc.).
+   ============================================================ */
+
+:root {
+  --bg:      #1a2a22;
+  --bg-alt:  #f1ece0;
+  --fg:      #e8e3d6;
+  --fg-alt:  #1a2a22;
+  --muted:   #8da095;
+  --accent:  #d6c79a;       /* parchment */
+  --rule:    rgba(232, 227, 214, 0.16);
+}

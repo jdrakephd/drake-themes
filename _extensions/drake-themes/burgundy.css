@@ -1,0 +1,14 @@
+/* ============================================================
+   BURGUNDY.CSS — Distinguished lecture palette
+   Deep burgundy with champagne accent. For named or invited lectures.
+   ============================================================ */
+
+:root {
+  --bg:      #2a1418;
+  --bg-alt:  #f5efe6;
+  --fg:      #efe7dc;
+  --fg-alt:  #1a1a1a;
+  --muted:   #b09a8b;
+  --accent:  #d8c5a0;       /* champagne */
+  --rule:    rgba(239, 231, 220, 0.16);
+}
