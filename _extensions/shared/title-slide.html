@@ -3,19 +3,25 @@
 $if(subtitle)$
   <p class="subtitle">$subtitle$</p>
 $endif$
+  <div class="title-meta">
+    <div class="title-meta-left">
 $for(author)$
-  <p class="author">$author$</p>
+      <p class="author">$author$</p>
 $endfor$
 $for(institute)$
-  <p class="institute">$institute$</p>
+      <p class="institute">$institute$</p>
 $endfor$
+    </div>
+    <div class="title-meta-right">
 $if(event)$
-  <p class="event">$event$</p>
+      <p class="event">$event$</p>
 $endif$
 $if(location)$
-  <p class="location">$location$</p>
+      <p class="location">$location$</p>
 $endif$
 $if(date)$
-  <p class="date">$date$</p>
+      <p class="date">$date$</p>
 $endif$
+    </div>
+  </div>
 </section>

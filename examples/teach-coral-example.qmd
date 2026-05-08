@@ -86,9 +86,9 @@ N0_values <- c(10, 50, 200, 800)
 
 ## Logistic dynamics {.figure-dark}
 
-![](figures/sir-epidemic.png){fig-align="center"}
+![](figures/logistic-transparent.png){fig-align="center"}
 
-<p class="caption">Solutions of the logistic equation for four initial population sizes. All converge to $K = 500$.</p>
+<p class="caption">Solutions of the logistic equation for two values of $R_0$. Both converge to $K$.</p>
 
 ## Key parameters
 

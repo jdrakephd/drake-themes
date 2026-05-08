@@ -55,11 +55,11 @@
 }
 
 /* --- Title slide: understated, no fuss --- */
-.reveal section.title-slide h1.title {
+.reveal #title-slide h1.title {
   font-weight: 400;
   font-size: 2.2em;
 }
-.reveal section.title-slide .subtitle {
+.reveal #title-slide .subtitle {
   font-size: 1.0em;
   color: var(--accent);
   font-style: italic;

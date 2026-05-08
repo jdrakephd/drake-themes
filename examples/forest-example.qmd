@@ -1,7 +1,7 @@
 ---
 title: "Introduction to compartmental models"
 subtitle: "ECOL 8910 -- Disease Ecology"
-author: "John Drake"
+author: "John M. Drake"
 institute: "Odum School of Ecology"
 event: "ECOL 8910 --- Disease Ecology"
 location: "Room 403, Ecology Building"
@@ -40,9 +40,9 @@ interchangeable.
 
 ## The flow diagram {.figure-dark}
 
-![](figures/sir-flow.png){fig-align="center"}
+![](figures/logistic-transparent.png){fig-align="center"}
 
-<p class="caption">The SIR flow diagram. Arrows represent transitions between compartments at rates $\beta$ and $\gamma$.</p>
+<p class="caption">Logistic growth at two rates, showing how populations approach carrying capacity $K$.</p>
 
 ## Writing the equations
 
@@ -104,9 +104,9 @@ times <- seq(0, 150, by = 0.5)
 out <- ode(y = y0, times = times, func = sir, parms = parms)
 ```
 
-## The epidemic curve {.figure-dark}
+## The epidemic curve {.figure}
 
-![](figures/sir-epidemic.png){fig-align="center"}
+![](figures/fig-invasion-curves-1.png){fig-align="center"}
 
 <p class="caption">SIR dynamics with $R_0 = 2$. The epidemic peaks when $S = N / R_0 = 500$.</p>
 

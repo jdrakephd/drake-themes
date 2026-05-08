@@ -37,15 +37,15 @@
 }
 
 /* --- Title slide: centered with decorative rule --- */
-.reveal section.title-slide {
+.reveal #title-slide {
   text-align: center;
 }
-.reveal section.title-slide h1.title {
+.reveal #title-slide h1.title {
   font-size: 2.8em;
   font-weight: 400;
   letter-spacing: -0.01em;
 }
-.reveal section.title-slide h1.title::after {
+.reveal #title-slide h1.title::after {
   content: "";
   display: block;
   width: 4em;
@@ -53,17 +53,24 @@
   background: var(--accent);
   margin: 0.4em auto 0;
 }
-.reveal section.title-slide .subtitle {
+.reveal #title-slide .subtitle {
   font-style: italic;
   color: var(--accent);
   font-family: var(--serif);
   font-size: 0.85em;
   letter-spacing: 0.02em;
 }
-.reveal section.title-slide .author,
-.reveal section.title-slide .institute,
-.reveal section.title-slide .date {
+.reveal #title-slide .author,
+.reveal #title-slide .institute,
+.reveal #title-slide .date {
   letter-spacing: 0.06em;
+}
+.reveal #title-slide .title-meta {
+  justify-content: center;
+  gap: 4em;
+}
+.reveal #title-slide .title-meta-right {
+  text-align: left;
 }
 
 /* --- Blockquote: centered, larger, no border — literary --- */

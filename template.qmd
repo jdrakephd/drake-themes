@@ -1,7 +1,7 @@
 ---
 title: "On the Logistic Curve"
 subtitle: "A note on saturation in epidemic models"
-author: "John Drake"
+author: "John M. Drake"
 institute: "Odum School of Ecology"
 date: today
 format:

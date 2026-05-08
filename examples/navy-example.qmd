@@ -1,7 +1,7 @@
 ---
 title: "Critical Slowing Down in Infectious Disease Systems"
 subtitle: "Early warning signals before epidemic transitions"
-author: "John Drake"
+author: "John M. Drake"
 institute: "Odum School of Ecology, University of Georgia"
 event: "Annual Meeting of the Ecological Society of America"
 location: "Portland, Oregon"
@@ -41,9 +41,9 @@ approaches zero. This produces measurable signatures:
 
 ## A canonical model {.figure-dark}
 
-![](figures/bifurcation-diagram.png){fig-align="center"}
+![](figures/logistic-transparent.png){fig-align="center"}
 
-<p class="caption">Bifurcation diagram for the SIS model as transmissibility increases through $R_0 = 1$.</p>
+<p class="caption">Logistic growth curves for two values of $R_0$, approaching carrying capacity $K$.</p>
 
 ## The SIS model
 

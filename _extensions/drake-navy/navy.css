@@ -18,10 +18,14 @@
   --rule:    rgba(236, 235, 230, 0.18);
 }
 
-/* --- Keynote-style top border on every slide --- */
+/* --- Keynote-style top border on every slide (except title) --- */
 .reveal .slides section {
   border-top: 2.5px solid var(--accent);
   padding-top: 0.7em;
+}
+.reveal .slides #title-slide {
+  border-top: none;
+  padding-top: 0;
 }
 
 /* --- Tighter, crisper headings --- */
@@ -32,15 +36,15 @@
 }
 
 /* --- Gold rule under subtitle on title slide --- */
-.reveal section.title-slide .subtitle {
+.reveal #title-slide .subtitle {
   border-bottom: 1.5px solid var(--accent);
   padding-bottom: 0.8em;
   display: inline-block;
 }
 
 /* --- Author/institute line: spaced uppercase for formality --- */
-.reveal section.title-slide .author,
-.reveal section.title-slide .institute {
+.reveal #title-slide .author,
+.reveal #title-slide .institute {
   letter-spacing: 0.08em;
 }
 

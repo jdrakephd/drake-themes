@@ -148,46 +148,55 @@
 /* ============================================================
    Title slide
    ============================================================ */
-.reveal section.title-slide {
+.reveal #title-slide {
   text-align: left;
 }
-.reveal section.title-slide h1.title {
+.reveal #title-slide h1.title {
   font-size: 2.4em;
   font-weight: 700;
   color: var(--primary);
   margin-bottom: 0.15em;
 }
-.reveal section.title-slide .subtitle {
+.reveal #title-slide .subtitle {
   font-size: 1.0em;
   font-weight: 400;
   color: var(--fg-muted);
   margin-bottom: 1.2em;
 }
-.reveal section.title-slide .author,
-.reveal section.title-slide .date,
-.reveal section.title-slide .institute,
-.reveal section.title-slide .event,
-.reveal section.title-slide .location {
-  font-size: 0.6em;
-  color: var(--fg-muted);
-  letter-spacing: 0.02em;
+/* ---- Stacked metadata layout ---- */
+.reveal #title-slide .title-meta {
+  margin-top: 1.2em;
+}
+.reveal #title-slide .title-meta p {
   margin: 0.15em 0;
 }
-.reveal section.title-slide .author {
+.reveal #title-slide .author {
+  font-size: 0.7em;
   font-weight: 600;
   color: var(--fg);
 }
-.reveal section.title-slide .event {
-  margin-top: 0.8em;
+.reveal #title-slide .institute {
+  font-size: 0.55em;
+  color: var(--fg-muted);
+}
+.reveal #title-slide .event {
+  font-size: 0.55em;
   color: var(--primary);
   font-weight: 500;
+  margin-top: 0.8em;
 }
-.reveal section.title-slide .location {
+.reveal #title-slide .location {
+  font-size: 0.5em;
   font-style: italic;
+  color: var(--fg-muted);
+}
+.reveal #title-slide .date {
+  font-size: 0.5em;
+  color: var(--fg-muted);
 }
 
 /* ---- Primary-color bar at top of title slide ---- */
-.reveal section.title-slide::before {
+.reveal #title-slide::before {
   content: "";
   position: absolute;
   top: 0;

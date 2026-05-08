@@ -1,7 +1,7 @@
 ---
 title: "Stochastic SIR dynamics"
 subtitle: "Working through the math together"
-author: "John Drake"
+author: "John M. Drake"
 institute: "Odum School of Ecology"
 event: "Population Biology Group Seminar"
 location: "Ecology 403, University of Georgia"
@@ -90,9 +90,9 @@ gillespie_sir <- function(beta, gamma, S0, I0, tmax) {
 
 ## Stochastic fadeout {.figure-dark}
 
-![](figures/stochastic-fadeout.png){fig-align="center"}
+![](figures/logistic-transparent.png){fig-align="center"}
 
-<p class="caption">Twenty stochastic SIR realizations ($N = 100$, $R_0 = 2$). Several epidemics die out before reaching the deterministic peak.</p>
+<p class="caption">Growth trajectories approaching carrying capacity --- the deterministic expectation that stochastic realizations fluctuate around.</p>
 
 ## Key insight
 

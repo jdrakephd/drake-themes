@@ -1,7 +1,7 @@
 ---
 title: "On the Geometry of Epidemic Curves"
 subtitle: "A lecture on shape, symmetry, and the information they carry"
-author: "John Drake"
+author: "John M. Drake"
 institute: "Odum School of Ecology, University of Georgia"
 event: "Distinguished Lecture Series in Mathematical Biology"
 location: "University of Michigan, Ann Arbor"
@@ -49,9 +49,9 @@ The shape is controlled entirely by $R_0$ and the initial conditions.
 
 ## Symmetry and skewness {.figure-dark}
 
-![](figures/epidemic-curves.png){fig-align="center"}
+![](figures/logistic-transparent.png){fig-align="center"}
 
-<p class="caption">Epidemic curves for $R_0 \in \{1.5, 3, 8\}$. As $R_0$ increases, the curve sharpens and becomes more symmetric.</p>
+<p class="caption">Saturation curves for two growth rates, illustrating the relationship between $R_0$ and approach to equilibrium.</p>
 
 ## Symmetry near the threshold
 
