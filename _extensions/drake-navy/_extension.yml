@@ -1,0 +1,11 @@
+title: Drake Navy Theme
+author: John Drake
+version: 0.1.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    revealjs:
+      date-format: "MMMM D, YYYY"
+      template-partials:
+        - ../shared/title-slide.html
+      theme: [default, ../shared/base.css, navy.css]

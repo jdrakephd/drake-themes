@@ -1,0 +1,137 @@
+---
+title: "Critical Slowing Down in Infectious Disease Systems"
+subtitle: "Early warning signals before epidemic transitions"
+author: "John Drake"
+institute: "Odum School of Ecology, University of Georgia"
+event: "Annual Meeting of the Ecological Society of America"
+location: "Portland, Oregon"
+date: today
+format:
+  drake-navy-revealjs:
+    slide-number: c/t
+    transition: none
+    incremental: false
+---
+
+# Motivation {.divider}
+
+## The forecasting challenge
+
+Can we detect when a disease system is approaching a critical
+transition --- before the transition occurs?
+
+This question sits at the intersection of dynamical systems theory
+and public health surveillance.
+
+::: {.fragment}
+The answer involves a phenomenon physicists call
+*critical slowing down*.
+:::
+
+## What is critical slowing down?
+
+Near a bifurcation point, the dominant eigenvalue of the system
+approaches zero. This produces measurable signatures:
+
+- Increased **autocorrelation** in time series
+- Rising **variance** in case counts
+- Slower **return to equilibrium** after perturbations
+
+### These signals precede the transition itself
+
+## A canonical model {.figure-slide}
+
+![](figures/bifurcation-diagram.png){fig-align="center"}
+
+<p class="caption">Bifurcation diagram for the SIS model as transmissibility increases through $R_0 = 1$.</p>
+
+## The SIS model
+
+The simplest framework exhibiting a transcritical bifurcation:
+
+$$
+\frac{dI}{dt} = \beta S I - \gamma I
+$$
+
+At $R_0 = \beta / \gamma = 1$, the disease-free equilibrium loses
+stability and an endemic equilibrium emerges.
+
+## Dreissenid mussel invasions {.figure}
+
+![](figures/fig-invasion-curves-1.png){fig-align="center"}
+
+<p class="caption">Newly invaded lakes (left) and cumulative invaded lakes (right) for *D. polymorpha* and *D. bugensis* in North America.</p>
+
+# Methods {.transition}
+
+From theory to detection
+
+## Detecting the signal in data
+
+```r
+library(earlywarnings)
+
+# Compute rolling window statistics
+ews <- generic_ews(
+  timeseries = cases,
+  winsize    = 50,
+  detrending = "gaussian",
+  bandwidth  = 10
+)
+```
+
+## Key results
+
+| Indicator       | Lead time | Sensitivity |
+|-----------------|:---------:|:-----------:|
+| Autocorrelation | Longer    | Moderate    |
+| Variance        | Shorter   | Moderate    |
+| Return rate     | Longer    | Higher      |
+| Combined index  | Longer    | Highest     |
+
+### Qualitative pattern --- specific values depend on system and detection method
+
+## A field perspective {background-image="figures/field.jpg" background-size="cover"}
+
+::: {.frosted}
+Long-term surveillance sites provide the high-frequency data
+needed to estimate early warning statistics in natural disease
+systems.
+:::
+
+## A reflection {.divider}
+
+> The goal is not to predict the future, but to make
+> the present more legible.
+
+## Implications
+
+These methods have practical value for:
+
+1. **Surveillance systems** --- triggering enhanced monitoring
+2. **Vaccination policy** --- timing booster campaigns
+3. **Elimination programs** --- confirming approach to zero
+
+::: {.fragment}
+The statistical machinery is straightforward; the hard part is
+building surveillance systems that generate data at the right
+resolution.
+:::
+
+## {.full-image background-image="figures/photo.png" background-size="cover" background-position="center"}
+
+::: {.full-image-label}
+Full image slide
+:::
+
+## Institutional context {.watermark background-image="figures/watermark.png" background-size="contain" background-position="center" background-opacity="0.12"}
+
+This work is supported by the University of Georgia and the
+Center for the Ecology of Infectious Diseases.
+
+Watermark slides are useful for institutional branding or
+subtle visual identity on acknowledgment and closing slides.
+
+# Thank you {.divider}
+
+*jdrake@uga.edu*

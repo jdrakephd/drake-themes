@@ -1,0 +1,138 @@
+---
+title: "Stochastic SIR dynamics"
+subtitle: "Working through the math together"
+author: "John Drake"
+institute: "Odum School of Ecology"
+event: "Population Biology Group Seminar"
+location: "Ecology 403, University of Georgia"
+date: today
+format:
+  drake-charcoal-revealjs:
+    slide-number: c/t
+    transition: none
+    incremental: false
+---
+
+# Setup {.divider}
+
+## What we want to understand
+
+The deterministic SIR model is clean, but real outbreaks are noisy.
+Today we will build up the stochastic version and see where the
+deterministic picture breaks.
+
+- When does stochasticity matter most?
+- What does "extinction" mean in a stochastic model?
+- How do we simulate this efficiently?
+
+## The deterministic backbone
+
+The classic SIR system:
+
+$$
+\frac{dS}{dt} = -\frac{\beta S I}{N}, \quad
+\frac{dI}{dt} = \frac{\beta S I}{N} - \gamma I, \quad
+\frac{dR}{dt} = \gamma I
+$$
+
+This gives us the epidemic curve everyone knows. But it assumes
+infinitely many individuals.
+
+### What happens when $N$ is small?
+
+## Transition rates
+
+In the stochastic (continuous-time Markov chain) formulation,
+we replace derivatives with event rates:
+
+| Event       | Rate             | Change            |
+|-------------|------------------|-------------------|
+| Infection   | $\beta S I / N$  | $S-1$, $I+1$     |
+| Recovery    | $\gamma I$       | $I-1$, $R+1$     |
+
+Each event is a single individual changing compartment.
+
+## Dreissenid mussel invasions {.figure}
+
+![](figures/fig-invasion-curves-1.png){fig-align="center"}
+
+<p class="caption">Newly invaded lakes (left) and cumulative invaded lakes (right) for *D. polymorpha* and *D. bugensis* in North America.</p>
+
+# Simulation {.transition}
+
+Building intuition through code
+
+## Gillespie simulation
+
+```r
+gillespie_sir <- function(beta, gamma, S0, I0, tmax) {
+  S <- S0; I <- I0; R <- 0; t <- 0
+  out <- data.frame(t = t, S = S, I = I, R = R)
+
+  while (t < tmax && I > 0) {
+    rate_inf <- beta * S * I / (S + I + R)
+    rate_rec <- gamma * I
+    rate_tot <- rate_inf + rate_rec
+
+    dt <- rexp(1, rate_tot)
+    t  <- t + dt
+
+    if (runif(1) < rate_inf / rate_tot) {
+      S <- S - 1; I <- I + 1
+    } else {
+      I <- I - 1; R <- R + 1
+    }
+    out <- rbind(out, data.frame(t, S, I, R))
+  }
+  out
+}
+```
+
+## Stochastic fadeout {.figure-slide}
+
+![](figures/stochastic-fadeout.png){fig-align="center"}
+
+<p class="caption">Twenty stochastic SIR realizations ($N = 100$, $R_0 = 2$). Several epidemics die out before reaching the deterministic peak.</p>
+
+## Key insight
+
+> In small populations the epidemic can go extinct
+> by chance, even when $R_0 > 1$.
+
+This is *stochastic fadeout* --- and it has no analogue in the
+deterministic model.
+
+## Where stochasticity matters
+
+Three regimes to keep in mind:
+
+- **Early invasion** ($I$ small) --- fate of the outbreak is a coin flip
+- **Near the peak** ($I$ large) --- deterministic model is a good guide
+- **Tail phase** ($I$ declining) --- last cases are again stochastic
+
+This is why importation events are so consequential: each one
+restarts the early-invasion lottery.
+
+## A natural example {background-image="figures/field.jpg" background-size="cover"}
+
+::: {.frosted}
+Amphibian chytrid dynamics in small, isolated populations where
+census sizes are in the tens --- exactly the regime where
+stochasticity dominates.
+:::
+
+## {.full-image background-image="figures/photo.png" background-size="cover" background-position="center"}
+
+::: {.full-image-label}
+Full image slide
+:::
+
+## Reading {.watermark background-image="figures/watermark.png" background-size="contain" background-position="center" background-opacity="0.10"}
+
+For next time, review Chapter 6 of Keeling & Rohani on
+stochastic models, paying attention to the relationship between
+population size and fadeout probability.
+
+# Questions? {.divider}
+
+*Let's discuss.*

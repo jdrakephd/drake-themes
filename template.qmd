@@ -5,7 +5,7 @@ author: "John Drake"
 institute: "Odum School of Ecology"
 date: today
 format:
-  drake-themes-navy-revealjs:
+  drake-navy-revealjs:
     slide-number: c/t
     transition: none
     incremental: false
