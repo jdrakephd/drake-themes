@@ -3,7 +3,7 @@ title: "On the Geometry of Epidemic Curves"
 subtitle: "A lecture on shape, symmetry, and the information they carry"
 author: "John M. Drake"
 institute: "Odum School of Ecology, University of Georgia"
-event: "Distinguished Lecture Series in Mathematical Biology"
+event: "Department of Ecology and Evolutionary Biology Seminar"
 location: "University of Michigan, Ann Arbor"
 date: today
 format:

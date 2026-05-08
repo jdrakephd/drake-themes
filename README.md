@@ -13,8 +13,8 @@ typographic character.
 |------------|----------------------------|-------------------------------------|
 | `navy`     | `drake-navy-revealjs`      | Conferences, external talks         |
 | `charcoal` | `drake-charcoal-revealjs`  | Working seminars                    |
-| `burgundy` | `drake-burgundy-revealjs`  | Named or distinguished lectures     |
-| `forest`   | `drake-forest-revealjs`    | Ecology / teaching (ECOL 8910 etc.) |
+| `burgundy` | `drake-burgundy-revealjs`  | Invited seminars, formal lectures     |
+| `forest`   | `drake-forest-revealjs`    | Field talks, workshops, working groups |
 
 ## Teaching themes
 

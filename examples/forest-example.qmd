@@ -1,10 +1,10 @@
 ---
 title: "Introduction to compartmental models"
-subtitle: "ECOL 8910 -- Disease Ecology"
+subtitle: "A practical overview for field ecologists"
 author: "John M. Drake"
 institute: "Odum School of Ecology"
-event: "ECOL 8910 --- Disease Ecology"
-location: "Room 403, Ecology Building"
+event: "CEID Workshop on Disease Dynamics"
+location: "Whitehall Forest, Athens, Georgia"
 date: today
 format:
   drake-forest-revealjs:
@@ -142,7 +142,7 @@ surveys, mark-recapture studies, and longitudinal sampling in
 natural populations.
 :::
 
-## Teaching team {.collaborators}
+## Workshop organizers {.collaborators}
 
 ::: {.people}
 
@@ -166,10 +166,10 @@ Paige Miller
 Full image slide
 :::
 
-## Course information {.watermark background-image="figures/watermark.png" background-size="contain" background-position="center" background-opacity="0.10"}
+## Resources {.watermark background-image="figures/watermark.png" background-size="contain" background-position="center" background-opacity="0.10"}
 
-All lecture slides and code are available on the course
-eLC page. Problem sets are due Fridays at 5 pm.
+Workshop materials and R scripts are available at
+the CEID GitHub repository.
 
 ## What we covered today
 
@@ -178,8 +178,8 @@ eLC page. Problem sets are due Fridays at 5 pm.
 3. $R_0$ controls whether an epidemic grows or fades
 4. Simulation in R is straightforward with `deSolve`
 
-### Next week: adding births, deaths, and waning immunity
+### This afternoon: hands-on session fitting models to field data
 
 # Questions? {.divider}
 
-*Office hours: Thursday 2--3 pm, Ecology 411*
+*jdrake@uga.edu*
