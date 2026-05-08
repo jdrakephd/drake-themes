@@ -38,7 +38,7 @@ disease status:
 The key assumption: everyone within a compartment is
 interchangeable.
 
-## The flow diagram {.figure-slide}
+## The flow diagram {.figure-dark}
 
 ![](figures/sir-flow.png){fig-align="center"}
 
@@ -104,7 +104,7 @@ times <- seq(0, 150, by = 0.5)
 out <- ode(y = y0, times = times, func = sir, parms = parms)
 ```
 
-## The epidemic curve {.figure-slide}
+## The epidemic curve {.figure-dark}
 
 ![](figures/sir-epidemic.png){fig-align="center"}
 

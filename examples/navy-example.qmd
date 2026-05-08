@@ -39,7 +39,7 @@ approaches zero. This produces measurable signatures:
 
 ### These signals precede the transition itself
 
-## A canonical model {.figure-slide}
+## A canonical model {.figure-dark}
 
 ![](figures/bifurcation-diagram.png){fig-align="center"}
 

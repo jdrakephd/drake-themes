@@ -84,7 +84,7 @@ times <- seq(0, 40, by = 0.1)
 N0_values <- c(10, 50, 200, 800)
 ```
 
-## Logistic dynamics {.figure-slide}
+## Logistic dynamics {.figure-dark}
 
 ![](figures/sir-epidemic.png){fig-align="center"}
 

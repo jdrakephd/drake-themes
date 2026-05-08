@@ -88,7 +88,7 @@ gillespie_sir <- function(beta, gamma, S0, I0, tmax) {
 }
 ```
 
-## Stochastic fadeout {.figure-slide}
+## Stochastic fadeout {.figure-dark}
 
 ![](figures/stochastic-fadeout.png){fig-align="center"}
 

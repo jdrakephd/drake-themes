@@ -47,7 +47,7 @@ The shape is controlled entirely by $R_0$ and the initial conditions.
 
 ### A remarkable compression of information
 
-## Symmetry and skewness {.figure-slide}
+## Symmetry and skewness {.figure-dark}
 
 ![](figures/epidemic-curves.png){fig-align="center"}
 

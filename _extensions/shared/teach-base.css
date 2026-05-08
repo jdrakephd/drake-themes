@@ -209,11 +209,23 @@
 }
 
 /* ============================================================
-   Figure-slide — light gray background
-   Use: ## My slide {.figure-slide}
+   Figure-dark — for transparent-background figures in light colors
+   Use: ## My slide {.figure-dark}
    ============================================================ */
-.reveal section.figure-slide {
-  background: var(--bg-alt);
+.reveal .backgrounds .slide-background.figure-dark {
+  background: #1a1a1a !important;
+}
+.reveal section.figure-dark {
+  background: transparent;
+  color: #ececec;
+}
+.reveal section.figure-dark h2 {
+  color: var(--primary);
+  font-size: 1.2em;
+}
+.reveal section.figure-dark .caption,
+.reveal section.figure-dark figcaption {
+  color: #a0a0a0;
 }
 
 /* ============================================================

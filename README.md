@@ -147,13 +147,14 @@ that have white backgrounds, giving clean lines with no color mismatch.
 <p class="caption">Figure caption here.</p>
 ```
 
-### Figure slide (tinted background)
+### Figure slide (dark background)
 
-Light, warm-tinted background using the theme's `--bg-alt` color.
-A softer alternative to the pure-white `.figure` slide.
+Uses the theme's dark background color. For figures drawn in
+light colors on a transparent background — they render naturally
+without a white box around them.
 
 ```markdown
-## Figure title {.figure-slide}
+## Figure title {.figure-dark}
 
 ![](figures/plot.png){fig-align="center"}
 ```

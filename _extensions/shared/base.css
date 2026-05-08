@@ -185,23 +185,6 @@
 }
 
 /* ============================================================
-   Figure-slide layout — light background flip
-   Use: ## My slide {.figure-slide}
-   ============================================================ */
-.reveal section.figure-slide {
-  background: var(--bg-alt);
-  color: var(--fg-alt);
-}
-.reveal section.figure-slide h1,
-.reveal section.figure-slide h2,
-.reveal section.figure-slide h3,
-.reveal section.figure-slide h4 {
-  color: var(--fg-alt);
-}
-.reveal section.figure-slide h3 { color: #555; }
-.reveal section.figure-slide blockquote { color: var(--fg-alt); }
-
-/* ============================================================
    Figure layout — pure white background for pre-made figures
    Use: ## My slide {.figure}
    ============================================================ */
@@ -224,6 +207,24 @@
   color: #666;
 }
 .reveal section.figure blockquote { color: var(--bg); }
+
+/* ============================================================
+   Figure-dark layout — theme background for transparent figures
+   Use: ## My slide {.figure-dark}
+   For figures drawn in light colors on transparent backgrounds.
+   Uses the theme's dark background so figures render naturally.
+   ============================================================ */
+.reveal section.figure-dark {
+  background: var(--bg);
+}
+.reveal section.figure-dark h2 {
+  color: var(--accent);
+  font-size: 1.2em;
+}
+.reveal section.figure-dark .caption,
+.reveal section.figure-dark figcaption {
+  color: var(--muted);
+}
 
 /* ============================================================
    Frosted caption — for text overlay on background images
