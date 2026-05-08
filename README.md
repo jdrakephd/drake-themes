@@ -1,10 +1,13 @@
 # drake-themes
 
-A Quarto extension providing a small family of Reveal.js presentation
-themes for academic talks. Serif typography, dark backgrounds by default,
-with specialized slide types for figures, transitions, and more.
+Quarto Reveal.js presentation themes for academic talks and teaching.
+Two theme families: **academic** (dark backgrounds, serif typography)
+and **teach** (light backgrounds, sans-serif, bold color palette).
 
-## Palettes
+## Academic themes
+
+Dark backgrounds with serif typography. Each has a distinctive
+typographic character.
 
 | Skin       | Format name                | Use case                            |
 |------------|----------------------------|-------------------------------------|
@@ -13,9 +16,24 @@ with specialized slide types for figures, transitions, and more.
 | `burgundy` | `drake-burgundy-revealjs`  | Named or distinguished lectures     |
 | `forest`   | `drake-forest-revealjs`    | Ecology / teaching (ECOL 8910 etc.) |
 
-All four share `base.css` (typography, layout, captions) from
-`_extensions/shared/`. Each skin adds its own color variables and
-distinctive typographic overrides.
+## Teaching themes
+
+Light backgrounds with DM Sans typography. Each color is designed
+so that every lecture in a course gets a different primary color
+while the overall feel stays consistent.
+
+| Color    | Format name                    | Hex       |
+|----------|--------------------------------|-----------|
+| `coral`  | `drake-teach-coral-revealjs`   | `#e63946` |
+| `teal`   | `drake-teach-teal-revealjs`    | `#2a9d8f` |
+| `violet` | `drake-teach-violet-revealjs`  | `#7b2d8e` |
+| `blue`   | `drake-teach-blue-revealjs`    | `#2563eb` |
+| `orange` | `drake-teach-orange-revealjs`  | `#e76f51` |
+| `green`  | `drake-teach-green-revealjs`   | `#16a34a` |
+| `pink`   | `drake-teach-pink-revealjs`    | `#db2777` |
+| `amber`  | `drake-teach-amber-revealjs`   | `#d97706` |
+
+Author defaults to "John M. Drake" in the teaching themes.
 
 ## Install
 
@@ -30,7 +48,7 @@ so collaborators get the themes automatically.
 
 ## Use
 
-In a `.qmd` file's YAML header, pick one of the four formats:
+### Academic theme
 
 ```yaml
 ---
@@ -46,6 +64,25 @@ format:
     slide-number: c/t
 ---
 ```
+
+### Teaching theme
+
+```yaml
+---
+title: "Lecture 4 --- Population Regulation"
+subtitle: "Density dependence and its consequences"
+event: "ECOL 3500 --- Ecology"
+location: "Room 200, Biological Sciences"
+date: today
+format:
+  drake-teach-coral-revealjs:
+    slide-number: c/t
+---
+```
+
+Author defaults to "John M. Drake" in teaching themes (override
+in YAML if needed). Swap `coral` with any other color for the
+next lecture.
 
 Replace `drake-navy` with `drake-charcoal`, `drake-burgundy`, or
 `drake-forest` as needed.
@@ -203,10 +240,14 @@ The `examples/` directory contains a full demo deck for each theme
 showing every slide type. Render any of them:
 
 ```bash
+# Academic themes
 quarto render examples/navy-example.qmd
 quarto render examples/charcoal-example.qmd
 quarto render examples/burgundy-example.qmd
 quarto render examples/forest-example.qmd
+
+# Teaching theme
+quarto render examples/teach-coral-example.qmd
 ```
 
 ## Modifying the themes
@@ -216,23 +257,30 @@ The architecture is deliberately minimal:
 ```
 _extensions/
   shared/
-    base.css               — all shared typography, layout, and slide types
+    base.css               — academic theme: shared typography, layout, slide types
+    teach-base.css         — teaching theme: shared typography, layout, slide types
     title-slide.html       — custom title slide partial (event/location fields)
-  drake-navy/
-    _extension.yml
-    navy.css               — navy color variables + typographic overrides
-  drake-charcoal/...
-  drake-burgundy/...
-  drake-forest/...
+  drake-navy/              — academic skins (dark background, serif)
+  drake-charcoal/
+  drake-burgundy/
+  drake-forest/
+  drake-teach-coral/       — teaching palettes (light background, DM Sans)
+  drake-teach-teal/
+  drake-teach-violet/
+  drake-teach-blue/
+  drake-teach-orange/
+  drake-teach-green/
+  drake-teach-pink/
+  drake-teach-amber/
 ```
 
-- `shared/base.css` — change typography, layout, or add new slide types here.
-- `shared/title-slide.html` — modify the title slide structure here.
-- `<skin>.css` — change colors and theme-specific styling here.
+- `shared/base.css` — academic theme typography and layout.
+- `shared/teach-base.css` — teaching theme typography and layout.
+- `shared/title-slide.html` — title slide structure (shared by both families).
+- `<skin>.css` — color variables and theme-specific overrides.
 
-To add a new palette, create a new `_extensions/drake-<name>/`
-directory with an `_extension.yml` and skin CSS file. Use an existing
-skin as a template.
+To add a new academic palette, create `_extensions/drake-<name>/`.
+To add a new teaching color, create `_extensions/drake-teach-<color>/`.
 
 ## License
 

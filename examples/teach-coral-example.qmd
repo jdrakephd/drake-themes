@@ -1,0 +1,154 @@
+---
+title: "Population Regulation"
+subtitle: "Lecture 4 --- Density dependence and its consequences"
+institute: "Odum School of Ecology"
+event: "ECOL 3500 --- Ecology"
+location: "Room 200, Biological Sciences"
+date: today
+format:
+  drake-teach-coral-revealjs:
+    slide-number: c/t
+    transition: none
+    incremental: false
+---
+
+## Where we left off
+
+Last time we introduced exponential growth:
+
+$$N_{t+1} = \lambda N_t$$
+
+This model predicts unbounded growth. Today we ask:
+**what stops populations from growing forever?**
+
+## Density dependence
+
+The per-capita growth rate declines as population size increases.
+
+- **Food limitation** --- fewer resources per individual
+- **Space** --- territorial animals exclude newcomers
+- **Disease** --- transmission increases with density
+- **Predation** --- predators aggregate where prey are dense
+
+### All of these create negative feedback on growth
+
+## The logistic model
+
+Adding a carrying capacity $K$ to the exponential model:
+
+$$\frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right)$$
+
+- When $N \ll K$: growth is approximately exponential
+- When $N = K$: growth stops
+- When $N > K$: population declines
+
+## Growth rate vs. density {.figure}
+
+![](figures/fig-invasion-curves-1.png){fig-align="center"}
+
+<p class="caption">Per-capita growth rate as a function of population density in two Dreissenid mussel species.</p>
+
+# Equilibria {.transition}
+
+What happens in the long run?
+
+## Finding equilibria
+
+Set $dN/dt = 0$ and solve:
+
+$$rN\left(1 - \frac{N}{K}\right) = 0$$
+
+Two solutions:
+
+1. $N^* = 0$ (extinction)
+2. $N^* = K$ (carrying capacity)
+
+### $K$ is a stable equilibrium; $0$ is unstable
+
+## Stability analysis
+
+```r
+library(deSolve)
+
+logistic <- function(t, y, parms) {
+  with(as.list(c(y, parms)), {
+    dN <- r * N * (1 - N / K)
+    list(c(dN = dN))
+  })
+}
+
+parms <- c(r = 0.5, K = 500)
+times <- seq(0, 40, by = 0.1)
+
+# Start from different initial conditions
+N0_values <- c(10, 50, 200, 800)
+```
+
+## Logistic dynamics {.figure-slide}
+
+![](figures/sir-epidemic.png){fig-align="center"}
+
+<p class="caption">Solutions of the logistic equation for four initial population sizes. All converge to $K = 500$.</p>
+
+## Key parameters
+
+| Parameter | Symbol  | Meaning                              |
+|-----------|---------|--------------------------------------|
+| Growth rate | $r$   | Maximum per-capita rate of increase  |
+| Carrying capacity | $K$ | Equilibrium population size      |
+| Doubling time | $\ln 2 / r$ | Time to double when $N \ll K$ |
+
+## A quote to remember
+
+> The struggle for existence inevitably follows from the high
+> rate at which all organic beings tend to increase.
+>
+> --- Charles Darwin, *On the Origin of Species*
+
+## Field study {background-image="figures/photo.png" background-size="cover"}
+
+::: {.frosted}
+Long-term population monitoring at the Coweeta Hydrologic
+Laboratory provides data on density-dependent dynamics
+in forest communities.
+:::
+
+## {.full-image background-image="figures/photo.png" background-size="cover" background-position="center"}
+
+::: {.full-image-label}
+Coweeta LTER
+:::
+
+## Teaching team {.collaborators}
+
+::: {.people}
+
+::: {.person}
+![](figures/person1.png)
+
+Sarah Chen (TA)
+:::
+
+::: {.person}
+![](figures/person2.png)
+
+Marcus Williams (TA)
+:::
+
+::: {.person}
+![](figures/person3.png)
+
+Priya Patel (ULA)
+:::
+
+:::
+
+## Logistics {.watermark background-image="figures/watermark.png" background-size="contain" background-position="center" background-opacity="0.08"}
+
+- Problem Set 3 is due Friday at 5 pm on eLC
+- Lab this week: fitting the logistic model to data in R
+- Office hours: Thursday 2--3 pm, Ecology 411
+
+# Next time {.divider}
+
+*Competition and the Lotka--Volterra model*
