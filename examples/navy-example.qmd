@@ -137,25 +137,13 @@ Pejman Rohani
 ::: {.person}
 ![](figures/person3.png)
 
-Erica Laber
+Suzanne O'Regan
 :::
 
 ::: {.person}
 ![](figures/person4.png)
 
-Suzanne O'Regan
-:::
-
-::: {.person}
-![](figures/person5.png)
-
 Bogdan Epureanu
-:::
-
-::: {.person}
-![](figures/person6.png)
-
-Tobias Brett
 :::
 
 :::

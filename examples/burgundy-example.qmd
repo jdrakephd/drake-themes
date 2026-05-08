@@ -150,10 +150,6 @@ Suzanne O'Regan
 Bogdan Epureanu
 :::
 
-::: {.person}
-![](figures/person5.png)
-
-Erica Laber
 :::
 
 :::

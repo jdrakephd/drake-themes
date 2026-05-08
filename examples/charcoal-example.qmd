@@ -128,23 +128,11 @@ stochasticity dominates.
 ::: {.person}
 ![](figures/person1.png)
 
-Erica Laber
-:::
-
-::: {.person}
-![](figures/person2.png)
-
-Tobias Brett
-:::
-
-::: {.person}
-![](figures/person3.png)
-
 Paige Miller
 :::
 
 ::: {.person}
-![](figures/person4.png)
+![](figures/person2.png)
 
 Éric Marty
 :::

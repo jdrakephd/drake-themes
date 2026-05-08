@@ -155,12 +155,6 @@ Paige Miller
 ::: {.person}
 ![](figures/person2.png)
 
-Tobias Brett
-:::
-
-::: {.person}
-![](figures/person3.png)
-
 Éric Marty
 :::
 
