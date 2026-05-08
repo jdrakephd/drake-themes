@@ -160,6 +160,35 @@ Thank you to our sponsors.
 Adjust `background-opacity` (0.08--0.20) to taste. The `.watermark`
 class adds a text shadow so content stays legible.
 
+### Collaborators slide
+
+Circular portrait photos arranged in a row with names underneath.
+Images are automatically cropped to circles with an accent-color
+border.
+
+```markdown
+## Collaborators {.collaborators}
+
+::: {.people}
+
+::: {.person}
+![](figures/alice.jpg)
+
+Alice Smith
+:::
+
+::: {.person}
+![](figures/bob.jpg)
+
+Bob Jones
+:::
+
+:::
+```
+
+Wrap all `.person` divs in a single `.people` container. The layout
+uses flexbox and will wrap to multiple rows if needed.
+
 ### Source/caption line
 
 A small, muted line for figure attributions or notes.

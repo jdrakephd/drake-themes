@@ -121,6 +121,36 @@ census sizes are in the tens --- exactly the regime where
 stochasticity dominates.
 :::
 
+## Working group {.collaborators}
+
+::: {.people}
+
+::: {.person}
+![](figures/person1.png)
+
+Erica Laber
+:::
+
+::: {.person}
+![](figures/person2.png)
+
+Tobias Brett
+:::
+
+::: {.person}
+![](figures/person3.png)
+
+Paige Miller
+:::
+
+::: {.person}
+![](figures/person4.png)
+
+Éric Marty
+:::
+
+:::
+
 ## {.full-image background-image="figures/photo.png" background-size="cover" background-position="center"}
 
 ::: {.full-image-label}
