@@ -11,8 +11,38 @@ format:
     slide-number: c/t
     transition: none
     incremental: false
-    footer: "📷 ✅ Photos OK · 🔗 ✅ Social sharing OK · Please credit speaker"
+    footer: "Photos OK (📷) · Social sharing OK (🔗) · Please credit speaker"
 ---
+
+## Collaborators {.collaborators}
+
+::: {.people}
+
+::: {.person}
+![](figures/person1.png)
+
+Andrew Park
+:::
+
+::: {.person}
+![](figures/person2.png)
+
+Pejman Rohani
+:::
+
+::: {.person}
+![](figures/person3.png)
+
+Suzanne O'Regan
+:::
+
+::: {.person}
+![](figures/person4.png)
+
+Bogdan Epureanu
+:::
+
+:::
 
 # Motivation {.divider}
 
@@ -117,36 +147,6 @@ These methods have practical value for:
 The statistical machinery is straightforward; the hard part is
 building surveillance systems that generate data at the right
 resolution.
-:::
-
-## Collaborators {.collaborators}
-
-::: {.people}
-
-::: {.person}
-![](figures/person1.png)
-
-Andrew Park
-:::
-
-::: {.person}
-![](figures/person2.png)
-
-Pejman Rohani
-:::
-
-::: {.person}
-![](figures/person3.png)
-
-Suzanne O'Regan
-:::
-
-::: {.person}
-![](figures/person4.png)
-
-Bogdan Epureanu
-:::
-
 :::
 
 ## {.full-image background-image="figures/photo.png" background-size="cover" background-position="center"}

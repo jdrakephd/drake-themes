@@ -13,6 +13,24 @@ format:
     incremental: false
 ---
 
+## Working group {.collaborators}
+
+::: {.people}
+
+::: {.person}
+![](figures/person1.png)
+
+Paige Miller
+:::
+
+::: {.person}
+![](figures/person2.png)
+
+Éric Marty
+:::
+
+:::
+
 # Setup {.divider}
 
 ## What we want to understand
@@ -119,24 +137,6 @@ restarts the early-invasion lottery.
 Amphibian chytrid dynamics in small, isolated populations where
 census sizes are in the tens --- exactly the regime where
 stochasticity dominates.
-:::
-
-## Working group {.collaborators}
-
-::: {.people}
-
-::: {.person}
-![](figures/person1.png)
-
-Paige Miller
-:::
-
-::: {.person}
-![](figures/person2.png)
-
-Éric Marty
-:::
-
 :::
 
 ## {.full-image background-image="figures/photo.png" background-size="cover" background-position="center"}

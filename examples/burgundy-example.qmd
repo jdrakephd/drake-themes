@@ -13,6 +13,36 @@ format:
     incremental: false
 ---
 
+## Collaborators {.collaborators}
+
+::: {.people}
+
+::: {.person}
+![](figures/person1.png)
+
+Pejman Rohani
+:::
+
+::: {.person}
+![](figures/person2.png)
+
+Andrew Park
+:::
+
+::: {.person}
+![](figures/person3.png)
+
+Suzanne O'Regan
+:::
+
+::: {.person}
+![](figures/person4.png)
+
+Bogdan Epureanu
+:::
+
+:::
+
 # Prologue {.divider}
 
 ## An old observation
@@ -120,38 +150,6 @@ contact structure.
 ::: {.frosted}
 The spatial structure of host populations imprints itself on
 epidemic shape --- a signature as readable as the curve itself.
-:::
-
-## Collaborators {.collaborators}
-
-::: {.people}
-
-::: {.person}
-![](figures/person1.png)
-
-Pejman Rohani
-:::
-
-::: {.person}
-![](figures/person2.png)
-
-Andrew Park
-:::
-
-::: {.person}
-![](figures/person3.png)
-
-Suzanne O'Regan
-:::
-
-::: {.person}
-![](figures/person4.png)
-
-Bogdan Epureanu
-:::
-
-:::
-
 :::
 
 ## {.full-image background-image="figures/photo.png" background-size="cover" background-position="center"}

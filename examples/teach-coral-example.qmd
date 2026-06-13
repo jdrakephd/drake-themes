@@ -12,6 +12,30 @@ format:
     incremental: false
 ---
 
+## Teaching team {.collaborators}
+
+::: {.people}
+
+::: {.person}
+![](figures/person1.png)
+
+Sarah Chen (TA)
+:::
+
+::: {.person}
+![](figures/person2.png)
+
+Marcus Williams (TA)
+:::
+
+::: {.person}
+![](figures/person3.png)
+
+Priya Patel (ULA)
+:::
+
+:::
+
 ## Where we left off
 
 Last time we introduced exponential growth:
@@ -117,30 +141,6 @@ in forest communities.
 
 ::: {.full-image-label}
 Coweeta LTER
-:::
-
-## Teaching team {.collaborators}
-
-::: {.people}
-
-::: {.person}
-![](figures/person1.png)
-
-Sarah Chen (TA)
-:::
-
-::: {.person}
-![](figures/person2.png)
-
-Marcus Williams (TA)
-:::
-
-::: {.person}
-![](figures/person3.png)
-
-Priya Patel (ULA)
-:::
-
 :::
 
 ## Logistics {.watermark background-image="figures/watermark.png" background-size="contain" background-position="center" background-opacity="0.08"}

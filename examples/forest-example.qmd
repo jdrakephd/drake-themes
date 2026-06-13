@@ -13,6 +13,24 @@ format:
     incremental: false
 ---
 
+## Workshop organizers {.collaborators}
+
+::: {.people}
+
+::: {.person}
+![](figures/person1.png)
+
+Paige Miller
+:::
+
+::: {.person}
+![](figures/person2.png)
+
+Éric Marty
+:::
+
+:::
+
 # Welcome {.divider}
 
 ## Today's plan
@@ -140,24 +158,6 @@ The SIR framework is the starting point for all of these.
 The parameters in our equations come from fieldwork --- contact
 surveys, mark-recapture studies, and longitudinal sampling in
 natural populations.
-:::
-
-## Workshop organizers {.collaborators}
-
-::: {.people}
-
-::: {.person}
-![](figures/person1.png)
-
-Paige Miller
-:::
-
-::: {.person}
-![](figures/person2.png)
-
-Éric Marty
-:::
-
 :::
 
 ## {.full-image background-image="figures/photo.png" background-size="cover" background-position="center"}
