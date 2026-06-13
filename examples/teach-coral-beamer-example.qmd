@@ -1,0 +1,26 @@
+---
+title: "Lecture 4 — Population Regulation"
+subtitle: "Density dependence and its consequences"
+event: "ECOL 3500 — Ecology"
+location: "Room 200, Biological Sciences"
+date: today
+format:
+  drake-teach-coral-beamer:
+    slide-level: 2
+---
+
+## Key ideas
+
+- Population growth slows as density increases
+- Feedback creates equilibrium behavior
+- Parameters map to interpretable mechanisms
+
+## Logistic model
+
+$$
+\frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right)
+$$
+
+## Discussion prompt
+
+What ecological processes could shift $K$ over a semester timescale?

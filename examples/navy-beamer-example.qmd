@@ -1,0 +1,34 @@
+---
+title: "On the Logistic Curve"
+subtitle: "A note on saturation in epidemic models"
+author: "John M. Drake"
+institute: "Odum School of Ecology"
+event: "Ecology Seminar"
+location: "Athens, GA"
+date: today
+format:
+  drake-navy-beamer:
+    slide-level: 2
+---
+
+## A simple question
+
+Why does the logistic equation appear so often in epidemiology and ecology?
+
+- Early growth is approximately exponential
+- Saturation emerges from finite carrying capacity
+- The same structure appears across many systems
+
+## Setup
+
+Consider
+
+$$
+\frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right)
+$$
+
+where $r$ is intrinsic growth and $K$ is carrying capacity.
+
+## Closing
+
+Thank you.

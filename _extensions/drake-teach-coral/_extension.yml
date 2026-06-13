@@ -10,3 +10,8 @@ contributes:
       template-partials:
         - ../shared/title-slide.html
       theme: [default, ../shared/teach-base.css, coral.css]
+    beamer:
+      date-format: "MMMM D, YYYY"
+      include-in-header:
+        - coral-beamer.tex
+        - ../shared/beamer-teach-base.tex
