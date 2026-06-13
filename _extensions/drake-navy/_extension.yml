@@ -10,3 +10,8 @@ contributes:
       template-partials:
         - ../shared/title-slide.html
       theme: [default, ../shared/base.css, navy.css]
+    beamer:
+      date-format: "MMMM D, YYYY"
+      include-in-header:
+        - navy-beamer.tex
+        - ../shared/beamer-academic-base.tex

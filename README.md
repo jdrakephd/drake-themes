@@ -1,6 +1,6 @@
 # drake-themes
 
-Quarto Reveal.js presentation themes for academic talks and teaching.
+Quarto Reveal.js and Beamer presentation themes for academic talks and teaching.
 Two theme families: **academic** (dark backgrounds, serif typography)
 and **teach** (light backgrounds, sans-serif, bold color palette).
 
@@ -15,6 +15,10 @@ typographic character.
 | `charcoal` | `drake-charcoal-revealjs`  | Working seminars                    |
 | `burgundy` | `drake-burgundy-revealjs`  | Invited seminars, formal lectures     |
 | `forest`   | `drake-forest-revealjs`    | Field talks, workshops, working groups |
+
+Beamer format names:
+`drake-navy-beamer`, `drake-charcoal-beamer`, `drake-burgundy-beamer`,
+`drake-forest-beamer`.
 
 ## Teaching themes
 
@@ -32,6 +36,12 @@ while the overall feel stays consistent.
 | `green`  | `drake-teach-green-revealjs`   | `#16a34a` |
 | `pink`   | `drake-teach-pink-revealjs`    | `#db2777` |
 | `amber`  | `drake-teach-amber-revealjs`   | `#d97706` |
+
+Beamer format names:
+`drake-teach-coral-beamer`, `drake-teach-teal-beamer`,
+`drake-teach-violet-beamer`, `drake-teach-blue-beamer`,
+`drake-teach-orange-beamer`, `drake-teach-green-beamer`,
+`drake-teach-pink-beamer`, `drake-teach-amber-beamer`.
 
 Author defaults to "John M. Drake" in the teaching themes.
 
@@ -86,6 +96,36 @@ next lecture.
 
 Replace `drake-navy` with `drake-charcoal`, `drake-burgundy`, or
 `drake-forest` as needed.
+
+### Academic theme (Beamer)
+
+```yaml
+---
+title: "Talk title"
+subtitle: "Optional subtitle"
+author: "Author Name"
+institute: "Affiliation"
+event: "Conference or Seminar Name"
+location: "City, Venue"
+date: today
+format:
+  drake-navy-beamer: default
+---
+```
+
+### Teaching theme (Beamer)
+
+```yaml
+---
+title: "Lecture 4 --- Population Regulation"
+subtitle: "Density dependence and its consequences"
+event: "ECOL 3500 --- Ecology"
+location: "Room 200, Biological Sciences"
+date: today
+format:
+  drake-teach-coral-beamer: default
+---
+```
 
 ### Title slide fields
 
@@ -249,6 +289,10 @@ quarto render examples/forest-example.qmd
 
 # Teaching theme
 quarto render examples/teach-coral-example.qmd
+
+# Beamer examples
+quarto render examples/navy-beamer-example.qmd --to drake-navy-beamer
+quarto render examples/teach-coral-beamer-example.qmd --to drake-teach-coral-beamer
 ```
 
 ## Modifying the themes
@@ -260,6 +304,8 @@ _extensions/
   shared/
     base.css               — academic theme: shared typography, layout, slide types
     teach-base.css         — teaching theme: shared typography, layout, slide types
+    beamer-academic-base.tex — academic beamer base styling and title page
+    beamer-teach-base.tex    — teaching beamer base styling and title page
     title-slide.html       — custom title slide partial (event/location fields)
   drake-navy/              — academic skins (dark background, serif)
   drake-charcoal/
@@ -278,7 +324,8 @@ _extensions/
 - `shared/base.css` — academic theme typography and layout.
 - `shared/teach-base.css` — teaching theme typography and layout.
 - `shared/title-slide.html` — title slide structure (shared by both families).
-- `<skin>.css` — color variables and theme-specific overrides.
+- `<skin>.css` — revealjs color variables and theme-specific overrides.
+- `<skin>-beamer.tex` — beamer palette definitions for each theme.
 
 To add a new academic palette, create `_extensions/drake-<name>/`.
 To add a new teaching color, create `_extensions/drake-teach-<color>/`.
