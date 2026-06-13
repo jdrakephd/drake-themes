@@ -72,6 +72,7 @@ date: today
 format:
   drake-navy-revealjs:
     slide-number: c/t
+    footer: "Photos OK (📷) · Social sharing OK (🔗) · Please credit speaker"
 ---
 ```
 
@@ -238,6 +239,16 @@ Thank you to our sponsors.
 Adjust `background-opacity` (0.08--0.20) to taste. The `.watermark`
 class adds a text shadow so content stays legible.
 
+### Backup appendix break
+
+For Q&A material after the close, start the appendix with a divider:
+
+```markdown
+# Backup {.divider .backup}
+```
+
+Use this slide as the boundary between the main talk and backup slides.
+
 ### Collaborators slide
 
 Circular portrait photos arranged in a row with names underneath.
@@ -266,6 +277,7 @@ Bob Jones
 
 Wrap all `.person` divs in a single `.people` container. The layout
 uses flexbox and will wrap to multiple rows if needed.
+Place this slide immediately after the title slide.
 
 ### Source/caption line
 
@@ -273,6 +285,14 @@ A small, muted line for figure attributions or notes.
 
 ```html
 <p class="caption">Source: Author, Year.</p>
+```
+
+### Footer permissions line
+
+Write permissions as plain text first; color/emoji should be optional cues:
+
+```yaml
+footer: "Photos OK (📷) · Social sharing OK (🔗) · Please credit speaker"
 ```
 
 ## Examples

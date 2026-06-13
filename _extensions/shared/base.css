@@ -41,6 +41,27 @@
   letter-spacing: 0.005em;
 }
 
+/* ---- Optional large-room legibility adjustments ----
+   Set in YAML with: body-classes: projector-body-strong
+   or:                body-classes: projector-body-sans */
+body.projector-body-strong .reveal {
+  font-weight: 500;
+}
+body.projector-body-sans .reveal {
+  font-family: var(--sans);
+  font-weight: 450;
+  letter-spacing: 0;
+}
+body.projector-body-sans .reveal h1,
+body.projector-body-sans .reveal h2,
+body.projector-body-sans .reveal h3,
+body.projector-body-sans .reveal h4,
+body.projector-body-sans .reveal #title-slide .subtitle,
+body.projector-body-sans .reveal #title-slide .title-meta-left,
+body.projector-body-sans .reveal #title-slide .title-meta-right {
+  font-family: var(--sans);
+}
+
 .reveal .slides {
   text-align: left;
 }
@@ -305,6 +326,21 @@
   font-style: italic;
   font-weight: 400;
   color: var(--accent);
+}
+/* Optional appendix marker: # Backup {.divider .backup} */
+.reveal section.backup {
+  position: relative;
+}
+.reveal section.backup::after {
+  content: "Backup";
+  position: absolute;
+  right: 0.8em;
+  bottom: 0.5em;
+  font-family: var(--sans);
+  font-size: 0.35em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.6;
 }
 
 /* ============================================================
