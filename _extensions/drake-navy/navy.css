@@ -27,6 +27,12 @@
   border-top: none;
   padding-top: 0;
 }
+/* Dividers sit inside a wrapper <section> that already draws the top rule,
+   and are vertically centered, so their own rule would land just above the
+   title. Keep the single rule at the top edge. */
+.reveal .slides section.divider {
+  border-top: none;
+}
 
 /* --- Tighter, crisper headings --- */
 .reveal h1,
