@@ -301,6 +301,31 @@
   color: rgba(255, 255, 255, 0.85);
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
+/* The footer sits on a solid band in the deck's main color. The footer is one
+   element shared by all slides, so it keys off the present slide. */
+.reveal .slides section.full-image {
+  border-top: none;
+  padding-top: 0;
+}
+/* Screen only: in print Reveal marks every slide .present, and the footer is one
+   element repeated on each page, so it cannot take a band on just these pages. */
+@media screen {
+  .reveal:has(section.full-image.present) .footer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0.7em 0;
+    background: var(--primary, var(--bg));
+    color: #ffffff !important;
+    opacity: 1 !important;
+  }
+  .reveal:has(section.full-image.present) .slide-number {
+    background: transparent;
+    color: #ffffff !important;
+  }
+}
 
 /* ============================================================
    Watermark slide
@@ -390,10 +415,15 @@
    Footer — persistent sharing/attribution line
    ============================================================ */
 .reveal .footer {
-  font-size: 0.4em;
   color: var(--fg-muted);
   text-align: center;
   opacity: 0.7;
+}
+/* Quarto sets .reveal .footer to 18px (14px at narrow widths) and loads after this
+   file, so the size needs the stronger selector. */
+.reveal .footer.footer { font-size: 11.5pt; }
+@media screen and (max-width: 800px) {
+  .reveal .footer.footer { font-size: 9pt; }
 }
 
 /* ============================================================
